@@ -1,0 +1,25 @@
+---
+- name: "Playing with Ansible and Git"
+  hosts: localhost
+  connection: local
+  tasks:
+    - community.general.homebrew:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - awscli
+        - rclone
+        - ssh-copy-id
+
+    - community.general.homebrew_cask:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - iterm2
+        - google-cloud-sdk
+        - google-chrome
+        - cheatsheet
+        - docker
+        - postman
+        - vagrant
+        - visual-studio-code
