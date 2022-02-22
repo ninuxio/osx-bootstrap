@@ -10,6 +10,7 @@
         - awscli
         - rclone
         - ssh-copy-id
+        - pre-commit
 
     - community.general.homebrew_cask:
         name: "{{ item }}"
