@@ -11,6 +11,7 @@
         - rclone
         - ssh-copy-id
         - pre-commit
+        - shellcheck
 
     - community.general.homebrew_cask:
         name: "{{ item }}"
